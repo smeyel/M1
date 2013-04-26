@@ -1,0 +1,6 @@
+[submodule "ImageProcessing"]
+	path = ImageProcessing
+	url = git@github.com:smeyel/ImageProcessing.git
+[submodule "Tracking"]
+	path = Tracking
+	url = git@github.com:smeyel/Tracking.git
