@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "M1Host", "M1Host\M1Host.vcxproj", "{B1D2C6BB-BAE4-4E61-A397-A184DEC92F57}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libMiscTimeAndConfig", "Framework\libMiscTimeAndConfig\libMiscTimeAndConfig.vcxproj", "{7DECFA8A-BC81-4DEF-9953-453B3E347FB9}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libTwoColorCircleMarker", "ImageProcessing\libTwoColorCircleMarker\libTwoColorCircleMarker.vcxproj", "{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libVideoInput", "Framework\libVideoInput\libVideoInput.vcxproj", "{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib3dWorld", "Tracking\lib3dWorld\lib3dWorld.vcxproj", "{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libVideoInput", "Framework\libVideoInput\libVideoInput.vcxproj", "{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libTwoColorCircleMarker", "ImageProcessing\libTwoColorCircleMarker\libTwoColorCircleMarker.vcxproj", "{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libMiscTimeAndConfig", "Framework\libMiscTimeAndConfig\libMiscTimeAndConfig.vcxproj", "{9E89C9BD-92D5-46A6-B7AB-B59A0DDFB391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,22 +21,22 @@ Global
 		{B1D2C6BB-BAE4-4E61-A397-A184DEC92F57}.Debug|Win32.Build.0 = Debug|Win32
 		{B1D2C6BB-BAE4-4E61-A397-A184DEC92F57}.Release|Win32.ActiveCfg = Release|Win32
 		{B1D2C6BB-BAE4-4E61-A397-A184DEC92F57}.Release|Win32.Build.0 = Release|Win32
-		{7DECFA8A-BC81-4DEF-9953-453B3E347FB9}.Debug|Win32.ActiveCfg = Debug|Win32
-		{7DECFA8A-BC81-4DEF-9953-453B3E347FB9}.Debug|Win32.Build.0 = Debug|Win32
-		{7DECFA8A-BC81-4DEF-9953-453B3E347FB9}.Release|Win32.ActiveCfg = Release|Win32
-		{7DECFA8A-BC81-4DEF-9953-453B3E347FB9}.Release|Win32.Build.0 = Release|Win32
-		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Debug|Win32.Build.0 = Debug|Win32
-		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Release|Win32.ActiveCfg = Release|Win32
-		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Release|Win32.Build.0 = Release|Win32
-		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Debug|Win32.Build.0 = Debug|Win32
-		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Release|Win32.ActiveCfg = Release|Win32
-		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Release|Win32.Build.0 = Release|Win32
 		{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}.Debug|Win32.Build.0 = Debug|Win32
 		{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}.Release|Win32.ActiveCfg = Release|Win32
 		{F0B55C60-9485-43E1-87E2-EDE6A73CCEEF}.Release|Win32.Build.0 = Release|Win32
+		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Debug|Win32.Build.0 = Debug|Win32
+		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Release|Win32.ActiveCfg = Release|Win32
+		{F0B1D97E-EC76-4EB1-8421-F73CF5881A69}.Release|Win32.Build.0 = Release|Win32
+		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Debug|Win32.Build.0 = Debug|Win32
+		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Release|Win32.ActiveCfg = Release|Win32
+		{E9E73514-1E7D-4EA4-9FE7-FE83F887D38C}.Release|Win32.Build.0 = Release|Win32
+		{9E89C9BD-92D5-46A6-B7AB-B59A0DDFB391}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E89C9BD-92D5-46A6-B7AB-B59A0DDFB391}.Debug|Win32.Build.0 = Debug|Win32
+		{9E89C9BD-92D5-46A6-B7AB-B59A0DDFB391}.Release|Win32.ActiveCfg = Release|Win32
+		{9E89C9BD-92D5-46A6-B7AB-B59A0DDFB391}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
