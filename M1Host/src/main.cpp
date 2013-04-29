@@ -29,10 +29,11 @@ using namespace TwoColorCircleMarker;
 using namespace MiscTimeAndConfig;
 
 MyConfigManager configManager;
-//char *configfilename = "m1_interactive_record1.ini";
+//char *configfilename = "../m1_interactive_record1.ini";
 //char *configfilename = "m1_interactive_record2wide.ini";
-char *configfilename = "m1_timing_record1.ini";
+//char *configfilename = "../m1_timing_record1.ini";
 //char *configfilename = "m1_timing_record2wide.ini";
+char *configfilename = "../m1_basetest.ini";
 
 const char* wndCam0 = "CAM 0";
 const char* wndCam1 = "CAM 1";
@@ -132,7 +133,7 @@ string getCamParamName(CamParamEnum enumValue)
 #define CAMNUM	3
 int main()
 {
-/*	typedef enum { calibration, tracking, exiting } ModeEnum;
+	typedef enum { calibration, tracking, exiting } ModeEnum;
 
 	// Setup config management
 	configManager.init(configfilename);
@@ -239,9 +240,9 @@ int main()
 	if (!configManager.interactive)
 	{
 		cout << "Starting processing in non-interactive mode..." << endl;
-	}*/
+	}
 
-/*	while(mode != exiting)
+	while(mode != exiting)
 	{
 		timeMeasurement.start(M1::TimeMeasurementCodeDefs::FrameAll);
 		if (videoInputRunning)
@@ -422,8 +423,8 @@ int main()
 			}
 		}
 		timeMeasurement.finish(M1::TimeMeasurementCodeDefs::FrameAll);
-	}*/
-/*	timeMeasurement.finish(M1::TimeMeasurementCodeDefs::FullExecution);
+	}
+	timeMeasurement.finish(M1::TimeMeasurementCodeDefs::FullExecution);
 	detectionCollector.close();
 	for(int i=0; i<CAMNUM; i++)
 	{
@@ -445,5 +446,5 @@ int main()
 	log.flush();
 	log.close();
 
-	cout << "Done." << endl; */
+	cout << "Done." << endl;
 }

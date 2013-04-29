@@ -3,7 +3,7 @@
 #include <iostream>
 #include "DetectionResultExporterBase.h"
 #include "MarkerBase.h"
-#include "Camera.h"
+#include "camera.h"
 
 using namespace std;
 using namespace TwoColorCircleMarker;
