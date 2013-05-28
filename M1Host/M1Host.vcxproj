@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;%(AdditionalIncludeDirectories);include;$(SolutionDir)Framework\libVideoInput\include;$(SolutionDir)Tracking\lib3dWorld\include;$(SolutionDir)Framework\libMiscTimeAndConfig\include;$(SolutionDir)ImageProcessing\libTwoColorCircleMarker\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;%(AdditionalIncludeDirectories);include;$(SolutionDir)Framework\libVideoInput\include;$(SolutionDir)Tracking\lib3dWorld\include;$(SolutionDir)Framework\libLogConfigTime\include;$(SolutionDir)ImageProcessing\libTwoColorCircleMarker\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -68,6 +68,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;%(AdditionalIncludeDirectories);include;$(SolutionDir)Framework\libVideoInput\include;$(SolutionDir)Tracking\lib3dWorld\include;$(SolutionDir)Framework\libLogConfigTime\include;$(SolutionDir)ImageProcessing\libTwoColorCircleMarker\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -85,8 +86,8 @@
     <ClInclude Include="include\TimeMeasurementCodeDefines.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework\libMiscTimeAndConfig\libMiscTimeAndConfig.vcxproj">
-      <Project>{9e89c9bd-92d5-46a6-b7ab-b59a0ddfb391}</Project>
+    <ProjectReference Include="..\Framework\libLogConfigTime\libLogConfigTime.vcxproj">
+      <Project>{8927a516-de0f-4550-ae3f-14876252f716}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Framework\libVideoInput\libVideoInput.vcxproj">
       <Project>{f0b55c60-9485-43e1-87e2-ede6a73cceef}</Project>

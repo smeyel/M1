@@ -26,7 +26,7 @@
 using namespace cv;
 using namespace std;
 using namespace TwoColorCircleMarker;
-using namespace MiscTimeAndConfig;
+using namespace LogConfigTime;
 
 MyConfigManager configManager;
 //char *configfilename = "../m1_interactive_record1.ini";
@@ -209,7 +209,7 @@ int main()
 	}
 
 	// Setup time management
-	MiscTimeAndConfig::TimeMeasurement timeMeasurement;
+	TimeMeasurement timeMeasurement;
 	timeMeasurement.init();
 	M1::TimeMeasurementCodeDefs::setnames(&timeMeasurement);
 
