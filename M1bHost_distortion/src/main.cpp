@@ -29,7 +29,7 @@ using namespace TwoColorCircleMarker;
 using namespace LogConfigTime;
 
 MyConfigManager configManager;
-char *configfilename = "m1_interactive_record1.ini";
+char *configfilename = "m1b.ini";
 //char *configfilename = "m1_interactive_record2wide.ini";
 //char *configfilename = "../m1_timing_record1.ini";
 //char *configfilename = "m1_timing_record2wide.ini";
