@@ -29,11 +29,11 @@ using namespace TwoColorCircleMarker;
 using namespace LogConfigTime;
 
 MyConfigManager configManager;
-//char *configfilename = "../m1_interactive_record1.ini";
+char *configfilename = "m1_interactive_record1.ini";
 //char *configfilename = "m1_interactive_record2wide.ini";
 //char *configfilename = "../m1_timing_record1.ini";
 //char *configfilename = "m1_timing_record2wide.ini";
-char *configfilename = "m1_basetest.ini";
+//char *configfilename = "m1_basetest.ini";
 
 const char* wndCam0 = "CAM 0";
 const char* wndCam1 = "CAM 1";
