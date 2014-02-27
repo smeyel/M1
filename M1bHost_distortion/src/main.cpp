@@ -36,8 +36,6 @@ char *configfilename = "m1b.ini";
 //char *configfilename = "m1_basetest.ini";
 
 const char* wndCam0 = "CAM 0";
-const char* wndCam1 = "CAM 1";
-const char* wndCam2 = "CAM 2";
 
 uchar lastR, lastG, lastB;	// Color at last click...
 
@@ -130,7 +128,7 @@ string getCamParamName(CamParamEnum enumValue)
 	Cameras are not stationary initally to allow user to move them so they can
 	recognize the chessboard. After that, user can set cameras to be stationary.
 */
-#define CAMNUM	3
+#define CAMNUM	1
 int main()
 {
 	typedef enum { calibration, tracking, exiting } ModeEnum;
@@ -157,9 +155,7 @@ int main()
 	log << "Config file: " << configfilename << endl;
 	log << "Output (CSV) file: " << configManager.outputFileName << endl;
 	log << "Input cam files: " << endl <<
-		"  " << configManager.cam0FileName << endl <<
-		"  " << configManager.cam1FileName << endl <<
-		"  " << configManager.cam2FileName << endl;
+		"  " << configManager.cam0FileName << endl;
 
 	VideoInput *videoInputs[CAMNUM];
 
@@ -168,8 +164,6 @@ int main()
 		videoInputs[i] = VideoInputFactory::CreateVideoInput(VIDEOINPUTTYPE_GENERIC);
 	}
 	videoInputs[0]->init(configManager.cam0FileName.data());
-	videoInputs[1]->init(configManager.cam1FileName.data());
-	videoInputs[2]->init(configManager.cam2FileName.data());
 
 	Mat *frameCaptured[CAMNUM];
 	Mat *frameUndistorted[CAMNUM];
@@ -216,7 +210,7 @@ int main()
 	// Show hints for user
 	cout << "Keys:" << endl << "(ESC) exit" << endl << "(s) Cameras are stationary" << endl;
 	cout << "(m) Cameras are moving" << endl << "(t) Tracking mode" << endl << "(c) back to calibration mode" << endl;
-	cout << "(0),(1) and (2) adjust camera parameters for camera 0, 1 and 2." << endl;
+	cout << "(0) adjust camera parameters for camera 0." << endl;
 	cout << "Adjust (g) gain or (e) exposure with (+) and (-)" << endl;
 
 	// Setup windows and mouse callback
@@ -224,10 +218,6 @@ int main()
 	{
 		namedWindow(wndCam0, CV_WINDOW_AUTOSIZE);
 		cvSetMouseCallback(wndCam0, mouse_callback, (void*)frameCaptured[0]);
-		namedWindow(wndCam1, CV_WINDOW_AUTOSIZE);
-		cvSetMouseCallback(wndCam1, mouse_callback, (void*)frameCaptured[1]);
-		namedWindow(wndCam2, CV_WINDOW_AUTOSIZE);
-		cvSetMouseCallback(wndCam2, mouse_callback, (void*)frameCaptured[2]);
 	}
 
 	// Start main loop
@@ -337,14 +327,10 @@ int main()
 		if (configManager.showInputImage)
 		{
 			imshow(wndCam0,*frame[0]);
-			imshow(wndCam1,*frame[1]);
-			imshow(wndCam2,*frame[2]);
 		}
 		if (configManager.verboseColorCodedFrame)
 		{
 			imshow("CAM 0 CC",*(trackers[0]->visColorCodeFrame));
-			imshow("CAM 1 CC",*(trackers[1]->visColorCodeFrame));
-			imshow("CAM 2 CC",*(trackers[2]->visColorCodeFrame));
 		}
 		timeMeasurement.finish(M1::TimeMeasurementCodeDefs::ShowImages);
 
@@ -394,14 +380,6 @@ int main()
 				break;
 			case '0':	// Adjust cam 0
 				adjustCam = 0;
-				cout << "Now adjusting " << getCamParamName(camParam) << " of cam " << adjustCam << endl;
-				break;
-			case '1':	// Adjust cam 1
-				adjustCam = 1;
-				cout << "Now adjusting " << getCamParamName(camParam) << " of cam " << adjustCam << endl;
-				break;
-			case '2':	// Adjust cam 2
-				adjustCam = 2;
 				cout << "Now adjusting " << getCamParamName(camParam) << " of cam " << adjustCam << endl;
 				break;
 			case 'e':	// Adjust exposure
