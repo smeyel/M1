@@ -297,6 +297,18 @@ int main()
 					// Stopping calibration...
 					cout << "Simultaneous calibration complete. Switching to TRACKING mode." << endl;
 					mode = tracking;
+					cout << "extrinsic" << endl;
+					for(int i=0; i<CAMNUM; i++)
+						cout << cams[i]->GetT() << endl;
+					cout << "fx fy" << endl;
+					for(int i=0; i<CAMNUM; i++){
+						Matx33f intr = cams[i]->GetCameraMatrix();
+						float fx = intr(0,0);
+						float fy = intr(1,1);
+						cout << fx << " " << fy << endl;
+						Mat dist = cams[i]->getDistortionCoeffs();
+						cout << dist << endl;
+					}
 				}
 				timeMeasurement.finish(M1::TimeMeasurementCodeDefs::Calibration);
 			}
