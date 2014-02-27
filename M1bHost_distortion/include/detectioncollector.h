@@ -41,14 +41,10 @@ public:
 
 		//cout << "Marker in cam " << cam->cameraID << endl;
 
-		// Create Ray (3D)
-		Ray newRay = cam->pointImg2World(marker->center);
-		rays.push_back(newRay);
+		stream << marker->isCenterValid << ";"
+				<< marker->center.x << ";"
+				<< marker->center.y << endl;
 
-		// Write results to output file (newRay.cameraID is CAMERAID_WORLD)
-		stream << newRay.originalCameraID << ";" << currentFrameIdx << ";" <<
-			newRay.A.val[0] << ";" << newRay.A.val[1] << ";" << newRay.A.val[2] << ";" << newRay.A.val[3] << ";" <<
-			newRay.B.val[0] << ";" << newRay.B.val[1] << ";" << newRay.B.val[2] << ";" << newRay.B.val[3] << std::endl;
 	}
 
 	void ShowRaysInFrame(Mat& frame, Camera& cam)

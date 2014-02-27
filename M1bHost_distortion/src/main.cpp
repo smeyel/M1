@@ -224,7 +224,7 @@ int main()
 	int adjustCam = 0;
 	CamParamEnum camParam = exposure;
 	int frameIdx = -1;
-	ModeEnum mode = calibration;
+	ModeEnum mode = tracking;
 	bool videoInputRunning = true;	// If false, main loop runs without capturing new frames (useful with AVI files)
 	timeMeasurement.start(M1::TimeMeasurementCodeDefs::FullExecution);
 	if (!configManager.interactive)
@@ -317,7 +317,7 @@ int main()
 					doTrackingOnFrame(*cams[i],*frame[i],*trackers[i],frameIdx);
 	
 					// Display rays in both cameras
-					detectionCollector.ShowRaysInFrame(*frame[i],*cams[i]);
+					//detectionCollector.ShowRaysInFrame(*frame[i],*cams[i]);
 				}
 				timeMeasurement.finish(M1::TimeMeasurementCodeDefs::Tracking);
 			}
