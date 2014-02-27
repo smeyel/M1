@@ -29,14 +29,14 @@ LIBS += ../Framework/libCameraAbstraction/libCameraAbstraction.a
 LIBS += ../Framework/libLogConfigTime/libLogConfigTime.a
 
 
-all: M1Host
+all: M1bHost_distortion
 
 
-M1HOST_OBJECTS = src/main.o
+M1BHOST_DISTORTION_OBJECTS = src/main.o
 
 
-M1Host: $(M1HOST_OBJECTS)
-	$(CC) -o M1Host $(M1HOST_OBJECTS) $(LIBS) $(LDFLAGS)
+M1bHost_distortion: $(M1BHOST_DISTORTION_OBJECTS)
+	$(CC) -o M1bHost_distortion $(M1BHOST_DISTORTION_OBJECTS) $(LIBS) $(LDFLAGS)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
@@ -45,6 +45,6 @@ M1Host: $(M1HOST_OBJECTS)
 	$(CC) $(CFLAGS) $< -o $@
 	
 clean:
-	rm -rf src/*.o M1Host
+	rm -rf src/*.o M1bHost_distortion
 	
 .PHONY: all clean
